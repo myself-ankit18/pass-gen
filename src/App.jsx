@@ -53,11 +53,11 @@ function App() {
 
   useEffect(() => {
     generatePassword();
-  }, [number, symbol, length, generatePassword]);
+  }, [number, symbol, length, generatePassword, type]);
 
   return (
     <div className="bg-zinc-800 min-h-screen w-full flex justify-center flex-col items-center px-4 py-8">
-      <h1 className="text-3xl text-zinc-400 font-bold text-center mb-4">
+      <h1 className="text-3xl lg:text-4xl text-zinc-400 font-bold text-center mb-4">
         Password Generator
       </h1>
 

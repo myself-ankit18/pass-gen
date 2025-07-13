@@ -16,11 +16,11 @@ function App() {
 
   const downloadJpg = () => {
     if (qrRef.current === null) return;
-
+    let randomNum = Math.floor(Math.random()*5000)
     toJpeg(qrRef.current, { quality: 0.95 })
       .then((dataUrl) => {
         const link = document.createElement("a");
-        link.download = "password-qr.jpg";
+        link.download = `password-qr ${randomNum}.jpg`;
         link.href = dataUrl;
         link.click();
       })
